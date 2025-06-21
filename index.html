@@ -1,43 +1,33 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை</title>
-
-  <!-- Tailwind CSS via CDN -->
+  <!-- No external CSS link: Tailwind CSS is loaded via CDN for simplicity as per common practice in this environment -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Custom Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       background-color: #f0fdf4;
     }
-
     .container {
       max-width: 1200px;
     }
-
     .product-card {
       background-color: #ffffff;
       border-radius: 1rem;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease-in-out;
     }
-
     .product-card:hover {
       transform: translateY(-5px);
     }
-
     .section-title {
       position: relative;
       padding-bottom: 0.5rem;
     }
-
     .section-title::after {
       content: '';
       position: absolute;
@@ -49,145 +39,194 @@
       background-color: #10B981;
       border-radius: 2px;
     }
-
     .about-us-section {
       background-color: #ecfdf5;
       border-radius: 1.5rem;
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
-
-    /* Mobile Navigation */
+    /* Custom styles for mobile navigation */
     .mobile-menu-button {
-      display: none;
+      display: none; /* Hidden by default, shown on small screens */
     }
-
     .mobile-menu {
-      display: none;
+      display: none; /* Hidden by default, shown when menu is open */
       flex-direction: column;
       width: 100%;
-      background-color: #16a34a;
+      background-color: #16a34a; /* Darker green for mobile menu */
       position: absolute;
-      top: 100%;
+      top: 100%; /* Position below header */
       left: 0;
       padding: 1rem 0;
       z-index: 10;
       border-radius: 0 0 1rem 1rem;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
-
     .mobile-menu a {
       color: white;
       padding: 0.75rem 1.5rem;
       text-align: center;
+      width: 100%;
     }
-
     .mobile-menu a:hover {
-      background-color: #0d7334;
+      background-color: #0d7334; /* Even darker green on hover */
     }
 
+    /* Show mobile menu button and hide desktop nav on small screens */
     @media (max-width: 767px) {
       .mobile-menu-button {
         display: block;
       }
-
       .desktop-nav {
         display: none;
       }
     }
   </style>
 </head>
-
 <body class="text-gray-800">
 
-  <!-- Header -->
-  <header class="bg-gradient-to-r from-green-600 to-green-800 text-white py-3 md:py-4 rounded-b-3xl shadow-lg relative">
-    <div class="container mx-auto px-4 flex items-center justify-between">
-      
-      <!-- Logo -->
-      <img src="/logo.png" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md" />
-
-      <!-- Title -->
-      <div class="text-center flex-grow">
-        <h1 class="text-xl md:text-2xl font-bold">அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை</h1>
-        <p class="text-sm md:text-md font-light hidden md:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
-      </div>
-
-      <!-- Desktop Navigation -->
-      <nav class="desktop-nav hidden md:flex space-x-6">
-        <a href="#about-us" class="hover:underline text-lg font-medium">எங்களைப் பற்றி</a>
-        <a href="#contact" class="hover:underline text-lg font-medium">தொடர்பு விவரங்கள்</a>
-      </nav>
-
-      <!-- Mobile Menu Toggle -->
-      <button class="mobile-menu-button md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
+<header class="bg-gradient-to-r from-green-600 to-green-800 text-white py-3 md:py-4 rounded-b-3xl shadow-lg relative">
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <!-- Logo on the left -->
+    <img src="/logo.png" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md">
+    
+    <!-- Header Text (title and slogan) -->
+    <div class="text-center flex-grow">
+      <h1 class="text-xl md:text-2xl font-bold mb-0 md:mb-1">அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை</h1>
+      <p class="text-sm md:text-md font-light hidden md:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
     </div>
 
-    <!-- Mobile Navigation -->
-    <nav class="mobile-menu hidden md:hidden">
-      <a href="#about-us">எங்களைப் பற்றி</a>
-      <a href="#contact">தொடர்பு விவரங்கள்</a>
+    <!-- Desktop Navigation -->
+    <nav class="desktop-nav hidden md:flex space-x-6">
+      <a href="#about-us" class="hover:underline text-lg font-medium">எங்களைப் பற்றி</a>
+      <a href="#contact" class="hover:underline text-lg font-medium">தொடர்பு விவரங்கள்</a>
     </nav>
-  </header>
 
-  <!-- Main Content -->
-  <main class="container mx-auto px-4 py-12">
+    <!-- Mobile Menu Button (Hamburger) -->
+    <button class="mobile-menu-button md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
 
-    <!-- Products Section -->
-    <section id="products" class="mb-16">
-      <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்கள் தயாரிப்புகள்</h2>
-      <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-    </section>
+  <!-- Mobile Navigation (hidden by default, shown with JS) -->
+  <nav class="mobile-menu hidden md:hidden">
+    <a href="#about-us">எங்களைப் பற்றி</a>
+    <a href="#contact">தொடர்பு விவரங்கள்</a>
+  </nav>
+</header>
 
-    <!-- About Us Section -->
-    <section id="about-us" class="about-us-section p-8 md:p-12 mb-16 text-gray-700">
-      <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்களைப் பற்றி</h2>
-      <div class="space-y-6 text-lg leading-relaxed">
-        <p>அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது.</p>
-        <p>இயற்கை மூலிகைகள் மற்றும் பாரம்பரிய முறைகளைப் பயன்படுத்தி தயாரிக்கப்பட்ட மருந்துகள் உடலின் சமநிலையை மீட்டெடுக்க உதவுகின்றன.</p>
-        <p>நிபுணத்துவம் வாய்ந்த சித்த மருத்துவர்கள், உடல்நிலைப் பிரச்சனைகளுக்கு ஏற்ற மருந்துகளையும் சிகிச்சையையும் வழங்குகிறார்கள்.</p>
-        <ul class="list-disc list-inside space-y-2">
-          <li>உடம்பிலுள்ள வெட்டை வாயுவினை நீக்கும்.</li>
-          <li>C1–C6, L1–L5 டிஸ்க் பல்ஜை சரி செய்கிறது.</li>
-          <li>கழுத்து, முதுகு மற்றும் இடுப்பு வலிகளை குணமாக்கும்.</li>
-        </ul>
-      </div>
-    </section>
+<main class="container mx-auto px-4 py-12">
+  <section id="products" class="mb-16">
+    <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்கள் தயாரிப்புகள்</h2>
+    <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+  </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="about-us-section p-8 md:p-12 text-gray-700">
-      <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">தொடர்பு விவரங்கள்</h2>
-      <div class="text-center text-lg space-y-4">
-        <p><strong class="text-green-800">யார்:</strong> சிவ முருகேசன், சித்த மருத்துவர்</p>
-        <p><strong class="text-green-800">இடம்:</strong> [முகவரி: 123, முக்கிய சாலை, கோயம்புத்தூர், தமிழ்நாடு]</p>
-        <p class="flex items-center justify-center space-x-2">
-          <strong class="text-green-800">தொலைபேசி:</strong> +91 9367911097
-          <a href="https://wa.me/919367911097" target="_blank" class="text-green-500 hover:text-green-700">
-            <!-- WhatsApp Icon -->
-            <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill-rule="evenodd" d="..." clip-rule="evenodd" />
-            </svg>
-          </a>
-        </p>
-        <p><strong class="text-green-800">மின்னஞ்சல்:</strong> info@arulagamsiddha.com</p>
-        <p class="mt-6 text-xl font-semibold text-green-900">மேலும் தகவல்களுக்கு எங்களை தொடர்பு கொள்ளவும் அல்லது நேரில் வரவும்.</p>
-      </div>
-    </section>
+ <!-- About Us Section -->
+        <section id="about-us" class="about-us-section p-8 md:p-12 mb-16 text-gray-700">
+            <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்களைப் பற்றி</h2>
+            <div class="space-y-6 text-lg leading-relaxed">
+                <p>
+                    அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது. இயற்கையான முறையில் நோய்களை குணப்படுத்துவதிலும், ஆரோக்கியமான வாழ்விற்கு வழிகாட்டுவதிலும் நாங்கள் உறுதியாக இருக்கிறோம்.
+                </p>
+                <p>
+                    எங்கள் மருந்துகள் அனைத்தும் இயற்கை மூலிகைகள் மற்றும் பாரம்பரிய முறைகளைப் பயன்படுத்தி தயாரிக்கப்படுகின்றன. உடலின் சமநிலையை மீட்டெடுத்து, நோய் எதிர்ப்பு சக்தியை மேம்படுத்துவதே எங்கள் முக்கிய நோக்கம்.
+                </p>
+                <p>
+                    சுகாதாரமான மற்றும் பாதுகாப்பான முறையில் எங்கள் தயாரிப்புகளை உருவாக்குகிறோம். எங்கள் மருத்துவமனையில் நிபுணத்துவம் வாய்ந்த சித்த மருத்துவர்கள், உங்கள் உடல்நிலைக்கு ஏற்ற சிகிச்சை முறைகளையும், மருந்துகளையும் பரிந்துரைப்பார்கள்.
+                </p>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>உடம்பிலுள்ள வெட்டை வாயுவினை நீக்கும்.</li>
+                    <li>C1, C2, C3, C4, C5, C6, L1, L2, L3, L4, L5 டிஸ்க் பல்ஜை சரி செய்கிறது.</li>
+                    <li>கழுத்து வலி, முதுகு வலி, இடுப்பு வலி போன்றவற்றை குணப்படுத்தும்.</li>
+                </ul>
+            </div>
+        </section>
 
-  </main>
+ <!-- Contact Details Section -->
+        <section id="contact" class="about-us-section p-8 md:p-12 text-gray-700">
+            <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">தொடர்பு விவரங்கள்</h2>
+            <div class="text-center text-lg space-y-4">
+                <p><strong class="text-green-800">யார்:</strong> சிவ முருகேசன், சித்த மருத்துவர்</p>
+                <p><strong class="text-green-800">இடம்:</strong> [உங்கள் முழு முகவரியை இங்கே சேர்க்கவும், உதாரணத்திற்கு: 123, முக்கிய சாலை, கோயம்புத்தூர், தமிழ்நாடு]</p>
+                <p class="flex items-center justify-center space-x-2">
+                    <strong class="text-green-800">தொலைபேசி:</strong> +91 9367911097
+                    <!-- WhatsApp contact added here -->
+                    <a href="https://wa.me/919367911097" target="_blank" class="text-green-500 hover:text-green-700">
+                        <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12.001 2.002a9.999 9.999 0 00-9.999 9.999c0 1.776.495 3.444 1.35 4.887l-1.464 5.378 5.518-1.439a9.96 9.96 0 004.595 1.161h.001A9.999 9.999 0 0012.001 2.002zm3.17 14.862c-.2-.099-.974-.482-1.124-.537-.15-.054-.26-.081-.37-.081-.11 0-.215.041-.314.121-.099.081-.257.243-.314.298-.057.054-.11.06-.207.03-.099-.03-.424-.155-1.018-.629-.47-.38-.79-.636-1.115-.873-.324-.236-.67-.53-1.01-.82-.29-.25-.57-.46-.77-.66-.2-.2-.02-.308.18-.506.18-.184.39-.462.49-.616.1-.154.133-.292.2-.416.06-.125.03-.23-.01-.32-.041-.09-.37-.89-.47-.113-.1-.06-.88-.415-.88-.802-.001-.387.26-.59.35-.66.09-.071.21-.11.33-.11.12 0 .225.02.329.02.103 0 .157-.01.23-.05.07-.04.22-.09.28-.09.06-.001.19-.001.29-.001.09 0 .26-.04.38-.18.12-.14.45-.43.54-.53.09-.09.15-.1.25-.1.1 0 .2-.001.27.01.07.01.28.106.52.28.24.17.38.27.46.33.08.06.14.05.24-.001.09-.054.3-.12.5-.15.2-.03.52-.001.62.03.1.03.25.12.28.18.03.05.03.31.01.57-.02.26-.07.49-.12.57-.05.08-.12.16-.18.2-.06.05-.13.1-.2.15l-.01.01z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </p>
+                <p><strong class="text-green-800">மின்னஞ்சல்:</strong>info@arulagamsiddha.com</p>
+                <p class="mt-6 text-xl font-semibold text-green-900">மேலும் தகவல்களுக்கு எங்களை தொடர்பு கொள்ளவும் அல்லது நேரில் வரவும்.</p>
+            </div>
+        </section>
+  
+</main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-6 mt-12 rounded-t-3xl shadow-lg">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை. அனைத்து உரிமைகளும் பாதுகாக்கப்படவை.</p>
-    </div>
-  </footer>
+<footer class="bg-gray-800 text-white py-6 mt-12 rounded-t-3xl shadow-lg">
+  <div class="container mx-auto px-4 text-center">
+    <p>&copy; 2025 அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை. அனைத்து உரிமைகளும் பாதுகாக்கப்படவை.</p>
+  </div>
+</footer>
 
-  <!-- JavaScript -->
-  <script>
-    // Toggle mobile menu
-    document.addEventListener('DOMContent
-```
+<script>
+  // JavaScript for mobile menu toggle
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+
+      // Close menu when a link is clicked
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+        });
+      });
+    }
+  });
+
+
+  async function loadProducts() {
+    try {
+      const response = await fetch('/products/products.txt');
+      const text = await response.text();
+      const blocks = text.split(/^[-]{3,}$/m);
+
+      const productList = document.getElementById('product-list');
+      if (!productList) throw new Error('Missing #product-list container in DOM');
+
+      blocks.forEach(block => {
+        const lines = block.trim().split('\n').map(line => line.trim());
+        if (lines.length < 4) return;
+
+        const [name, image, price, ...descLines] = lines;
+        const description = descLines.join(' ');
+        const imgPath = `/products/${image}`;
+
+        const card = document.createElement('div');
+        card.className = 'product-card p-6 flex flex-col items-center text-center';
+        card.innerHTML = `
+          <img src="${imgPath}" alt="${name}" class="w-full h-64 object-contain rounded-lg mb-4 bg-white border" />
+          <h3 class="text-2xl font-semibold mb-2 text-green-700">${name}</h3>
+          <p class="text-lg font-bold text-green-600 mb-3">${price}</p>
+          <p class="text-gray-600 text-sm leading-relaxed">${description}</p>
+        `;
+
+        productList.appendChild(card);
+      });
+    } catch (err) {
+      console.error('Error loading product data:', err);
+    }
+  }
+
+  window.onload = loadProducts;
+</script>
+
+</body>
+</html>
