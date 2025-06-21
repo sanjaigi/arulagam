@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>அருளகம் சித்த வைத்திய சாலை</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -82,9 +82,9 @@
 
 <header class="bg-gradient-to-r from-green-600 to-green-800 text-white py-3 md:py-4 rounded-b-3xl shadow-lg relative">
   <div class="container mx-auto px-4 flex items-center justify-between">
-    <img src="/logo.png" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md">
+    <img src="/logo.png" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md" />
     <div class="text-center flex-grow">
-      <h1 class="text-xl md:text-2xl font-bold mb-0 md:mb-1">அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை</h1>
+      <h1 class="text-xl md:text-2xl font-bold mb-0 md:mb-1">அருளகம் சித்த வைத்திய சாலை</h1>
       <p class="text-sm md:text-md font-light hidden md:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
     </div>
     <nav class="desktop-nav hidden md:flex space-x-6">
@@ -92,7 +92,7 @@
       <a href="#contact" class="hover:underline text-lg font-medium">தொடர்பு விவரங்கள்</a>
     </nav>
     <button class="mobile-menu-button md:hidden text-white focus:outline-none" aria-label="Toggle menu">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
       </svg>
     </button>
@@ -106,26 +106,25 @@
 <main class="container mx-auto px-4 py-12">
   <section id="products" class="mb-16">
     <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்கள் தயாரிப்புகள்</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Sample Product Card -->
-      <div class="product-card p-6 flex flex-col items-center text-center">
-        <img src="/products/amukkura.jpg" alt="அமுக்குரா பொடி" class="w-full h-64 object-contain rounded-lg mb-4 bg-white border" />
-        <h3 class="text-2xl font-semibold mb-2 text-green-700">அமுக்குரா பொடி</h3>
-        <p class="text-lg font-bold text-green-600 mb-3">₹150</p>
-        <p class="text-gray-600 text-sm leading-relaxed">இயற்கையான அமுக்குரா மூலிகை பொடி. உடல் உறுதி மற்றும் சக்தி வழங்கும்.</p>
-      </div>
-    </div>
+    <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </section>
 
   <section id="about-us" class="about-us-section p-8 md:p-12 mb-16 text-gray-700">
     <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்களைப் பற்றி</h2>
     <div class="space-y-6 text-lg leading-relaxed">
-      <p>அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது.</p>
-      <p>இயற்கை மூலிகைகள் மற்றும் பாரம்பரிய முறைகளால் தயாரிக்கப்படும் தயாரிப்புகள் உடல் சமநிலையை மேம்படுத்துகின்றன.</p>
+      <p>
+        அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது. இயற்கையான முறையில் நோய்களை குணப்படுத்துவதிலும், ஆரோக்கியமான வாழ்விற்கு வழிகாட்டுவதிலும் நாங்கள் உறுதியாக இருக்கிறோம்.
+      </p>
+      <p>
+        எங்கள் மருந்துகள் அனைத்தும் இயற்கை மூலிகைகள் மற்றும் பாரம்பரிய முறைகளைப் பயன்படுத்தி தயாரிக்கப்படுகின்றன. உடலின் சமநிலையை மீட்டெடுத்து, நோய் எதிர்ப்பு சக்தியை மேம்படுத்துவதே எங்கள் முக்கிய நோக்கம்.
+      </p>
+      <p>
+        சுகாதாரமான மற்றும் பாதுகாப்பான முறையில் எங்கள் தயாரிப்புகளை உருவாக்குகிறோம். எங்கள் மருத்துவமனையில் நிபுணத்துவம் வாய்ந்த சித்த மருத்துவர்கள், உங்கள் உடல்நிலைக்கு ஏற்ற சிகிச்சை முறைகளையும், மருந்துகளையும் பரிந்துரைப்பார்கள்.
+      </p>
       <ul class="list-disc list-inside space-y-2">
-        <li>வெட்டை வாயுவை நீக்கும்.</li>
-        <li>C1–L5 டிஸ்க் பல்ஜ் குணப்படுத்தும்.</li>
-        <li>முதுகு, கழுத்து, இடுப்பு வலி குணமாகும்.</li>
+        <li>உடம்பிலுள்ள வெட்டை வாயுவினை நீக்கும்.</li>
+        <li>C1, C2, C3, C4, C5, C6, L1, L2, L3, L4, L5 டிஸ்க் பல்ஜை சரி செய்கிறது.</li>
+        <li>கழுத்து வலி, முதுகு வலி, இடுப்பு வலி போன்றவற்றை குணப்படுத்தும்.</li>
       </ul>
     </div>
   </section>
@@ -134,45 +133,86 @@
     <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">தொடர்பு விவரங்கள்</h2>
     <div class="text-center text-lg space-y-4">
       <p><strong class="text-green-800">யார்:</strong> சிவ முருகேசன், சித்த மருத்துவர்</p>
-      <p><strong class="text-green-800">இடம்:</strong> அருளகம் சித்த வைத்திய சாலை,திருவிகா நகர்,சின்னாளபட்டி,திண்டுக்கல் மாவட்டம், தமிழ்நாடு</p>
+      <p><strong class="text-green-800">இடம்:</strong> அருளகம் சித்த வைத்திய சாலை<br />திருவிகா நகர்<br />சின்னாளபட்டி<br />திண்டுக்கல் மாவட்டம்<br />தமிழ்நாடு</p>
       <p class="flex items-center justify-center space-x-2">
         <strong class="text-green-800">தொலைபேசி:</strong> +91 9367911097
         <a href="https://wa.me/919367911097" target="_blank" class="text-green-500 hover:text-green-700">
           <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path fill-rule="evenodd" d="M12.001 2.002a9.999 9.999..." clip-rule="evenodd" />
+            <path fill-rule="evenodd" d="M12.001 2.002a9.999 9.999 0 00-9.999 9.999c0 1.776.495 3.444 1.35 4.887l-1.464 5.378 5.518-1.439a9.96 9.96 0 004.595 1.161h.001A9.999 9.999 0 0012.001 2.002zm3.17 14.862c-.2-.099-.974-.482-1.124-.537-.15-.054-.26-.081-.37-.081-.11 0-.215.041-.314.121-.099.081-.257.243-.314.298-.057.054-.11.06-.207.03-.099-.03-.424-.155-1.018-.629-.47-.38-.79-.636-1.115-.873-.324-.236-.67-.53-1.01-.82-.29-.25-.57-.46-.77-.66-.2-.2-.02-.308.18-.506.18-.184.39-.462.49-.616.1-.154.133-.292.2-.416.06-.125.03-.226-.015-.318-.045-.09-.39-.94-.536-1.288-.14-.35-.283-.3-.395-.31-.1-.008-.21-.01-.32-.01-.11 0-.288.07-.438.33-.15.26-.57.55-.57 1.34 0 .79.59 1.55.672 1.66.082.11 1.16 1.77 2.81 2.48.39.17.69.27.93.35.39.13.75.11 1.03.07.31-.05.97-.4 1.11-.79.13-.39.13-.72.09-.79-.03-.07-.15-.11-.35-.2z" clip-rule="evenodd"></path>
           </svg>
         </a>
       </p>
-      <p><strong class="text-green-800">மின்னஞ்சல்:</strong> info@arulagamsiddha.com</p>
-      <p class="mt-6 text-xl font-semibold text-green-900">மேலும் தகவல்களுக்கு எங்களை தொடர்பு கொள்ளவும் அல்லது நேரில் வரவும்.</p>
+      <p><strong class="text-green-800">மின்னஞ்சல்:</strong> <a href="mailto:siv.murugesan@example.com" class="text-green-600 hover:underline">siv.murugesan@example.com</a></p>
     </div>
   </section>
 </main>
 
-<footer class="bg-gray-800 text-white py-6 mt-12 rounded-t-3xl shadow-lg">
-  <div class="container mx-auto px-4 text-center">
-    <p>&copy; 2025 அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை. அனைத்து உரிமைகளும் பாதுகாக்கப்படவை.</p>
-  </div>
-</footer>
-
 <script>
   // Mobile menu toggle
-  document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.querySelector('.mobile-menu-button');
-    const mobileMenu = document.querySelector('.mobile-menu');
+  const mobileMenuButton = document.querySelector(".mobile-menu-button");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-    if (mobileMenuButton && mobileMenu) {
-      mobileMenuButton.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-
-      mobileMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
-    }
+  mobileMenuButton.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
   });
+
+  // Fetch and render products from products/products.txt
+  async function fetchProducts() {
+    try {
+      const response = await fetch("products/products.txt");
+      if (!response.ok) throw new Error("Failed to fetch product list");
+      const text = await response.text();
+
+      // Split products by '---' separator
+      const rawProducts = text.split("---").map(p => p.trim()).filter(p => p.length > 0);
+
+      const productList = document.getElementById("product-list");
+      productList.innerHTML = "";
+
+      rawProducts.forEach(raw => {
+        const lines = raw.split("\n").map(line => line.trim()).filter(line => line.length > 0);
+        if (lines.length < 4) return; // skip invalid entries
+
+        const [name, imgFile, priceLine, ...descLines] = lines;
+        const price = priceLine.replace(/^விலை:\s*/, "");
+        const description = descLines.join(" ");
+
+        // Create card elements
+        const card = document.createElement("div");
+        card.className = "product-card p-6 flex flex-col items-center text-center";
+
+        const img = document.createElement("img");
+        img.src = `products/${imgFile}`;
+        img.alt = name;
+        img.className = "w-48 h-48 object-contain mb-6 rounded-xl shadow-md";
+
+        const title = document.createElement("h3");
+        title.textContent = name;
+        title.className = "text-xl font-semibold mb-2 text-green-900";
+
+        const priceEl = document.createElement("p");
+        priceEl.textContent = price ? `விலை: ${price}` : "விலை: தொடர்புக்கு";
+        priceEl.className = "text-lg font-bold text-green-700 mb-3";
+
+        const descEl = document.createElement("p");
+        descEl.textContent = description;
+        descEl.className = "text-gray-600";
+
+        card.appendChild(img);
+        card.appendChild(title);
+        card.appendChild(priceEl);
+        card.appendChild(descEl);
+
+        productList.appendChild(card);
+      });
+    } catch (error) {
+      console.error("Error loading products:", error);
+      const productList = document.getElementById("product-list");
+      productList.innerHTML = `<p class="text-center text-red-600">தயாரிப்புகளைப் பெற முடியவில்லை. தயவுசெய்து பின்னர் முயற்சிக்கவும்.</p>`;
+    }
+  }
+
+  fetchProducts();
 </script>
 
 </body>
