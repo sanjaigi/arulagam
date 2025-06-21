@@ -7,124 +7,175 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <style>
-    body { font-family:'Inter', sans-serif; background:#f0fdf4; }
-    .container { max-width:1200px; margin:0 auto; }
-    .product-card { background:white; border-radius:1rem; box-shadow:0 4px 12px rgba(0,0,0,0.1); transition:transform .3s; }
-    .product-card:hover { transform: translateY(-5px); }
-    .section-title { position:relative; padding-bottom:.5rem; }
-    .section-title::after { content:''; position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:80px; height:4px; background:#10B981; border-radius:2px; }
-    .about-us-section { background:#ecfdf5; border-radius:1.5rem; box-shadow:0 6px 16px rgba(0,0,0,0.15); }
-    .mobile-menu-button { display:none; }
-    .mobile-menu { display:none; flex-direction:column; width:100%; background:#16a34a; position:absolute; top:100%; left:0; padding:1rem 0; z-index:10; border-radius:0 0 1rem 1rem; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
-    .mobile-menu a { color:white; padding:.75rem 1.5rem; text-align:center; width:100%; }
-    .mobile-menu a:hover { background:#0d7334; }
-    @media(max-width:767px){ .mobile-menu-button{display:block;} .desktop-nav{display:none;} }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f0fdf4;
+    }
+    .container {
+      max-width: 1200px;
+    }
+    .product-card {
+      background-color: #ffffff;
+      border-radius: 1rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+    }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background-color: #10B981;
+      border-radius: 2px;
+    }
+    .about-us-section {
+      background-color: #ecfdf5;
+      border-radius: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    }
+    .mobile-menu-button {
+      display: none;
+    }
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: #16a34a;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      padding: 1rem 0;
+      z-index: 10;
+      border-radius: 0 0 1rem 1rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .mobile-menu a {
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-align: center;
+      width: 100%;
+    }
+    .mobile-menu a:hover {
+      background-color: #0d7334;
+    }
+    @media (max-width: 767px) {
+      .mobile-menu-button {
+        display: block;
+      }
+      .desktop-nav {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body class="text-gray-800">
 
 <header class="bg-gradient-to-r from-green-600 to-green-800 text-white py-3 md:py-4 rounded-b-3xl shadow-lg relative">
-  <div class="container flex items-center justify-between px-4">
-    <img src="logo1.jpg" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md" />
-    <div class="flex-grow text-center">
-      <h1 class="text-xl md:text-2xl font-bold">அருளகம் சித்த வைத்திய சாலை</h1>
-      <p class="text-sm font-light hidden md:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
+  <div class="container mx-auto px-4 flex items-center justify-between">
+    <img src="/logo1.jpg" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 rounded-full shadow-md" />
+    <div class="text-center flex-grow">
+      <h1 class="text-xl md:text-2xl font-bold mb-0 md:mb-1">அருளகம் சித்த வைத்திய சாலை</h1>
+      <p class="text-sm md:text-md font-light hidden md:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
     </div>
     <nav class="desktop-nav hidden md:flex space-x-6">
-      <a href="#about-us" class="hover:underline text-lg">எங்களைப் பற்றி</a>
-      <a href="#contact" class="hover:underline text-lg">தொடர்பு விவரங்கள்</a>
+      <a href="#about-us" class="hover:underline text-lg font-medium">எங்களைப் பற்றி</a>
+      <a href="#gallery" class="hover:underline text-lg font-medium">புகைப்படங்கள்</a>
+      <a href="#contact" class="hover:underline text-lg font-medium">தொடர்பு விவரங்கள்</a>
     </nav>
-    <button class="mobile-menu-button md:hidden" aria-label="Toggle menu">
-      <svg class="w-8 h-8 text-white"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <button class="mobile-menu-button md:hidden text-white focus:outline-none" aria-label="Toggle menu">
+      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
     </button>
   </div>
-  <nav class="mobile-menu hidden">
+  <nav class="mobile-menu hidden md:hidden">
     <a href="#about-us">எங்களைப் பற்றி</a>
+    <a href="#gallery">புகைப்படங்கள்</a>
     <a href="#contact">தொடர்பு விவரங்கள்</a>
   </nav>
 </header>
 
-<main class="container px-4 py-12">
+<main class="container mx-auto px-4 py-12">
 
-  <!-- Siddhar Banner -->
-  <div class="mb-10">
-    <img src="https://64.media.tumblr.com/4c452fcff9a3d61c24f46d7fd9492b17/tumblr_inline_n9byf9z4kM1sszq1p.jpg"
-         alt="18 Siddhars" class="w-full rounded-lg shadow-lg object-cover" />
-  </div>
-
-  <!-- Products Section -->
   <section id="products" class="mb-16">
-    <h2 class="text-4xl font-bold text-center section-title text-green-700 mb-10">எங்கள் தயாரிப்புகள்</h2>
+    <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்கள் தயாரிப்புகள்</h2>
     <div id="product-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
   </section>
 
-  <!-- About Us -->
   <section id="about-us" class="about-us-section p-8 md:p-12 mb-16 text-gray-700">
-    <h2 class="text-4xl font-bold text-center section-title text-green-700 mb-10">எங்களைப் பற்றி</h2>
-    <p>அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது...</p>
-    <ul class="list-disc list-inside mt-4 space-y-2">
-      <li>உடம்பிலுள்ள வெட்டை வாயுவினை நீக்கும்</li>
-      <li>C1–L5 டிஸ்க் பல்ஜ் குணப்படுத்தும்</li>
-      <li>முதுகு, கழுத்து, இடுப்பு வலி குணமாகும்</li>
-    </ul>
+    <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">எங்களைப் பற்றி</h2>
+    <div class="space-y-6 text-lg leading-relaxed">
+      <p>
+        அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை, பல தலைமுறைகளாக பாரம்பரிய சித்த மருத்துவ சேவையை வழங்கி வருகிறது. இயற்கையான முறையில் நோய்களை குணப்படுத்துவதிலும், ஆரோக்கியமான வாழ்விற்கு வழிகாட்டுவதிலும் நாங்கள் உறுதியாக இருக்கிறோம்.
+      </p>
+      <p>
+        எங்கள் மருந்துகள் அனைத்தும் இயற்கை மூலிகைகள் மற்றும் பாரம்பரிய முறைகளைப் பயன்படுத்தி தயாரிக்கப்படுகின்றன. உடலின் சமநிலையை மீட்டெடுத்து, நோய் எதிர்ப்பு சக்தியை மேம்படுத்துவதே எங்கள் முக்கிய நோக்கம்.
+      </p>
+      <p>
+        சுகாதாரமான மற்றும் பாதுகாப்பான முறையில் எங்கள் தயாரிப்புகளை உருவாக்குகிறோம். எங்கள் மருத்துவமனையில் நிபுணத்துவம் வாய்ந்த சித்த மருத்துவர்கள், உங்கள் உடல்நிலைக்கு ஏற்ற சிகிச்சை முறைகளையும், மருந்துகளையும் பரிந்துரைப்பார்கள்.
+      </p>
+      <ul class="list-disc list-inside space-y-2">
+        <li>உடம்பிலுள்ள வெட்டை வாயுவினை நீக்கும்.</li>
+        <li>C1, C2, C3, C4, C5, C6, L1, L2, L3, L4, L5 டிஸ்க் பல்ஜை சரி செய்கிறது.</li>
+        <li>கழுத்து வலி, முதுகு வலி, இடுப்பு வலி போன்றவற்றை குணப்படுத்தும்.</li>
+      </ul>
+    </div>
   </section>
 
-  <!-- Photo Gallery -->
   <section id="gallery" class="mb-16">
-    <h2 class="text-4xl font-bold text-center section-title text-green-700 mb-10">புகைப்படங்கள்</h2>
+    <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">புகைப்படங்கள்</h2>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       <img src="products/1.jpeg" alt="Photo 1" class="rounded-lg shadow-md object-cover w-full h-64" />
       <img src="products/2.jpeg" alt="Photo 2" class="rounded-lg shadow-md object-cover w-full h-64" />
-      <img src="products/3.jpeg" alt="Photo 3" class="rounded-lg shadow-md object-cover w/full h-64" />
-      <img src="products/4.jpeg" alt="Photo 4" class="rounded-lg shadow-md object-cover w/full h-64" />
-      <img src="products/5.jpeg" alt="Photo 5" class="rounded-lg shadow-md object-cover w/full h-64" />
+      <img src="products/3.jpeg" alt="Photo 3" class="rounded-lg shadow-md object-cover w-full h-64" />
+      <img src="products/4.jpeg" alt="Photo 4" class="rounded-lg shadow-md object-cover w-full h-64" />
+      <img src="products/5.jpeg" alt="Photo 5" class="rounded-lg shadow-md object-cover w-full h-64" />
       <img src="products/6.jpeg" alt="Photo 6" class="rounded-lg shadow-md object-cover w-full h-64" />
       <img src="products/7.jpeg" alt="Photo 7" class="rounded-lg shadow-md object-cover w-full h-64" />
       <img src="products/8.jpeg" alt="Photo 8" class="rounded-lg shadow-md object-cover w-full h-64" />
     </div>
   </section>
 
-  <!-- Contact Section -->
   <section id="contact" class="about-us-section p-8 md:p-12 text-gray-700">
-    <h2 class="text-4xl font-bold text-center section-title text-green-700 mb-10">தொடர்பு விவரங்கள்</h2>
-    <p class="text-center text-lg"><strong>இடம்:</strong> அருளகம் சித்த வைத்திய சாலை<br />
-    திருவிகா நகர்<br />சின்னாளபட்டி<br />திண்டுக்கல் மாவட்டம்<br />தமிழ்நாடு</p>
-    <p class="text-center mt-4"><strong>தொலைபேசி:</strong> +91 9367911097 • <strong>மின்னஞ்சல்:</strong> <a href="mailto:siv.murugesan@example.com" class="text-green-600">siv.murugesan@example.com</a></p>
+    <h2 class="text-4xl font-bold text-center mb-10 section-title text-green-700">தொடர்பு விவரங்கள்</h2>
+    <div class="text-center text-lg space-y-4">
+      <p><strong class="text-green-800">யார்:</strong> சிவ முருகேசன், சித்த மருத்துவர்</p>
+      <p><strong class="text-green-800">இடம்:</strong> அருளகம் சித்த வைத்திய சாலை<br />திருவிகா நகர்<br />சின்னாளபட்டி<br />திண்டுக்கல் மாவட்டம்<br />தமிழ்நாடு</p>
+      <p class="flex items-center justify-center space-x-2">
+        <strong class="text-green-800">தொலைபேசி:</strong> +91 9367911097
+        <a href="https://wa.me/919367911097" target="_blank" class="text-green-500 hover:text-green-700">
+          <svg class="w-6 h-6 inline-block" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path fill-rule="evenodd" d="M12.001 2.002a9.999 9.999 0 00-9.999 9.999c0 1.776.495 3.444 1.35 4.887l-1.464 5.378 5.518-1.439a9.96 9.96 0 004.595 1.161h.001A9.999 9.999 0 0012.001 2.002zm3.17 14.862c-.2-.099-.974-.482-1.124-.537-.15-.054-.26-.081-.37-.081-.11 0-.215.041-.314.121-.099.081-.257.243-.314.298-.057.054-.11.06-.207.03-.099-.03-.424-.155-1.018-.629-.47-.38-.79-.636-1.115-.873-.324-.236-.67-.53-1.01-.82-.29-.25-.57-.46-.77-.66-.2-.2-.02-.308.18-.506.18-.184.39-.462.49-.616.1-.154.133-.292.2-.416.06-.125.03-.226-.015-.318-.045-.09-.39-.94-.536-1.288-.14-.35-.283-.3-.395-.31-.1-.008-.21-.01-.32-.01-.11 0-.288.07-.438.33-.15.26-.57.55-.57 1.34 0 .79.59 1.55.672 1.66.082.11 1.16 1.77 2.81 2.48.39.17.69.27.93.35.39.13.75.11 1.03.07.31-.05.97-.4 1.11-.79.13-.38.13-.71.09-.79-.04-.09-.15-.14-.35-.24z" clip-rule="evenodd" />
+          </svg>
+        </a>
+      </p>
+    </div>
   </section>
 
 </main>
 
 <script>
-  document.querySelector(".mobile-menu-button").addEventListener("click", () => {
-    document.querySelector(".mobile-menu").classList.toggle("hidden");
-  });
+  // Mobile menu toggle
+  const menuButton = document.querySelector('.mobile-menu-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
 
-  async function fetchProducts() {
-    try {
-      const res = await fetch("products/products.txt");
-      if (!res.ok) throw new Error("products.txt not found");
-      const txt = await res.text();
-      const entries = txt.split("---").map(x => x.trim()).filter(x => x);
-      const container = document.getElementById("product-list");
-      container.innerHTML = "";
-      entries.forEach(data => {
-        const lines = data.split("\n").map(l => l.trim()).filter(Boolean);
-        if (lines.length < 4) return;
-        const [name, imgFile, priceLine, ...desc] = lines;
-        const card = document.createElement("div");
-        card.className = "product-card p-6 flex flex-col items-center text-center";
-        card.innerHTML = `
-          <img src="products/${imgFile}" alt="${name}" class="w-48 h-48 object-contain mb-4 rounded-xl shadow" />
-          <h3 class="text-xl font-semibold text-green-900 mb-2">${name}</h3>
-          <p class="text-lg font-bold text-green-700 mb-3">${priceLine}</p>
-          <p class="text-gray-600">${desc.join(" ")}</p>`;
-        container.appendChild(card);
-      });
-    } catch (e) {
-      console.error(e);
+  menuButton.addEventListener('click', () => {
+    if (mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+    } else {
+      mobileMenu.classList.add('hidden');
     }
-  }
-  fetchProducts();
+  });
 </script>
 
 </body>
