@@ -168,7 +168,15 @@
             <p class="text-green-700 font-bold mb-2">${priceLine}</p>
             <p class="text-gray-600 text-sm">${desc.join(" ")}</p>
           `;
-          container.appendChild(card);
+          card.addEventListener("click", () => {
+  document.getElementById("modal-image").src = `products/${imgFile}`;
+  document.getElementById("modal-name").textContent = name;
+  document.getElementById("modal-price").textContent = priceLine;
+  document.getElementById("modal-description").textContent = desc.join(" ");
+  document.getElementById("product-modal").classList.remove("hidden");
+});
+container.appendChild(card);
+
         });
       } catch (e) {
         console.error(e);
