@@ -190,6 +190,10 @@
     fetchProducts();
     loadGalleryImages();
   </script>
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('header');
+  header.classList.toggle('shadow-xl', window.scrollY > 10);
+});
 
 </body>
 </html>
