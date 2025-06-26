@@ -6,6 +6,8 @@
   <title>அருளகம் சித்த வைத்திய சாலை</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+ <head>
+  <!-- other head elements -->
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -33,7 +35,18 @@
     .animate-fade-in {
       animation: fadeIn 1.5s ease-in-out both;
     }
+
+    /* Zoom animation for modal */
+    #product-modal > div {
+      animation: zoomIn 0.3s ease;
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
   </style>
+</head>
+
 </head>
 <body class="text-gray-800">
 
