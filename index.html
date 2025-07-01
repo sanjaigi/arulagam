@@ -133,18 +133,41 @@
     <div id="gallery-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
   </section>
 
-  <section id="feedback" class="text-center my-12">
-  <h2 class="text-2xl font-bold text-green-700 mb-4">🗣️ வாடிக்கையாளர் பாராட்டு</h2>
-  <p class="text-gray-600 mb-6">எங்கள் சிகிச்சையைப் பெற்ற வாடிக்கையாளரின் குரல் பதிவு:</p>
+  <section id="feedback" class="text-center my-12 px-4">
+  <h2 class="text-3xl font-bold text-green-700 mb-6">🗣️ வாடிக்கையாளர் கருத்துகள்</h2>
+  <p class="text-gray-600 mb-8">எங்கள் சிகிச்சையைப் பெற்ற வாடிக்கையாளர்களின் உண்மையான குரல் பதிவுகள்:</p>
 
-  <button id="play-btn" class="bg-green-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition text-lg font-semibold">
-    ▶️ ஆடியோ இயக்கு
-  </button>
+  <div class="grid gap-6 max-w-3xl mx-auto">
+    <!-- Feedback 1 -->
+    <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow hover:shadow-lg transition-all">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Customer 1"
+           class="w-14 h-14 rounded-full border border-green-300 shadow-sm" />
+      <div class="text-left flex-1">
+        <p class="text-green-700 font-semibold mb-1">வாடிக்கையாளர் 1</p>
+        <p class="text-sm text-gray-500 mb-2">📅 June 25, 2025</p>
+        <audio controls class="w-full">
+          <source src="audio/test1.ogg" type="audio/ogg" />
+          உங்கள் உலாவியில் இந்த ஆடியோ இயங்கவில்லை.
+        </audio>
+      </div>
+    </div>
 
-  <audio id="customer-audio" class="hidden">
-    <source src="audio/test1.ogg" type="audio/ogg" />
-    உங்கள் உலாவியில் இந்த ஆடியோ இயக்க முடியவில்லை.
-  </audio>
+    <!-- Feedback 2 -->
+    <div class="flex items-start gap-4 bg-white p-4 rounded-xl shadow hover:shadow-lg transition-all">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Customer 2"
+           class="w-14 h-14 rounded-full border border-green-300 shadow-sm" />
+      <div class="text-left flex-1">
+        <p class="text-green-700 font-semibold mb-1">வாடிக்கையாளர் 2</p>
+        <p class="text-sm text-gray-500 mb-2">📅 June 26, 2025</p>
+        <audio controls class="w-full">
+          <source src="audio/feedback2.ogg" type="audio/ogg" />
+          உங்கள் உலாவியில் இந்த ஆடியோ இயங்கவில்லை.
+        </audio>
+      </div>
+    </div>
+
+    <!-- Add more blocks here as needed -->
+  </div>
 </section>
 
   <!-- Contact -->
