@@ -132,6 +132,20 @@
     <div id="gallery-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
   </section>
 
+  <section class="text-center my-12">
+  <h2 class="text-2xl font-bold text-green-700 mb-4">🗣️ வாடிக்கையாளர் பாராட்டு</h2>
+  <p class="text-gray-600 mb-6">எங்கள் சிகிச்சையைப் பெற்ற வாடிக்கையாளரின் குரல் பதிவு:</p>
+
+  <button id="play-btn" class="bg-green-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-green-700 transition text-lg font-semibold">
+    ▶️ ஆடியோ இயக்கு
+  </button>
+
+  <audio id="customer-audio" class="hidden">
+    <source src="audio/test1.ogg" type="audio/ogg" />
+    உங்கள் உலாவியில் இந்த ஆடியோ இயக்க முடியவில்லை.
+  </audio>
+</section>
+
   <!-- Contact -->
   <section id="contact" class="bg-white rounded-2xl shadow-lg p-6 sm:p-10 text-center text-gray-800">
     <h2 class="text-3xl sm:text-4xl font-bold text-green-700 section-title mb-6">தொடர்பு விவரங்கள்</h2>
@@ -236,6 +250,29 @@ container.appendChild(card);
   document.getElementById("close-modal").addEventListener("click", () => {
     document.getElementById("product-modal").classList.add("hidden");
   });
+</script>
+<script>
+  const audio = document.getElementById('customer-audio');
+  const playBtn = document.getElementById('play-btn');
+  let isPlaying = false;
+
+  playBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      audio.pause();
+      playBtn.textContent = '▶️ ஆடியோ இயக்கு';
+    } else {
+      audio.play();
+      playBtn.textContent = '⏸️ நிறுத்து';
+    }
+  });
+
+  audio.addEventListener('ended', () => {
+    playBtn.textContent = '▶️ ஆடியோ இயக்கு';
+    isPlaying = false;
+  });
+
+  audio.addEventListener('play', () => isPlaying = true);
+  audio.addEventListener('pause', () => isPlaying = false);
 </script>
 
 </body>
