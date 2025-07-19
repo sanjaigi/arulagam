@@ -1,4 +1,110 @@
-<!-- ...everything above unchanged... -->
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>அருளகம் சித்த வைத்திய சாலை</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Catamaran:wght@700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f7fafc; }
+    h1, h2, h3 { font-family: 'Catamaran', 'Inter', sans-serif; }
+    .section-title { position: relative; padding-bottom: .5rem; }
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 50%; bottom: 0;
+      transform: translateX(-50%);
+      width: 80px; height: 4px;
+      background: linear-gradient(90deg,#10b981 60%,#ffd700 100%);
+      border-radius: 2px;
+    }
+    @keyframes fadeInUp { from{opacity:0;transform:translateY(20px);} to{opacity:1;transform:translateY(0);} }
+    .animate-fadeInUp { animation: fadeInUp 1.2s; }
+  </style>
+</head>
+<body class="text-gray-900 bg-[#f7fafc]">
+
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-yellow-400 text-white py-4 sticky top-0 z-50 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="logo1.jpg" alt="Logo" class="h-12 w-12 rounded-full shadow-lg border-4 border-yellow-300" />
+        <div>
+          <h1 class="text-2xl font-extrabold tracking-wide">அருளகம் சித்த வைத்திய சாலை</h1>
+          <p class="text-xs sm:text-sm hidden sm:block">பாரம்பரிய சித்த மருத்தவத்தின் நம்பிக்கை மையம்</p>
+        </div>
+      </div>
+      <nav class="hidden md:flex space-x-8 font-semibold text-lg">
+        <a href="#about-us" class="hover:text-yellow-100 transition">எங்களைப் பற்றி</a>
+        <a href="#products" class="hover:text-yellow-100 transition">தயாரிப்புகள்</a>
+        <a href="#gallery" class="hover:text-yellow-100 transition">புகைப்படங்கள்</a>
+        <a href="#feedback" class="hover:text-yellow-100 transition">கருத்துகள்</a>
+        <a href="#contact" class="hover:text-yellow-100 transition">தொடர்பு</a>
+      </nav>
+      <button id="mobile-menu-toggle" class="md:hidden">
+        <svg class="w-8 h-8 text-yellow-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden flex-col bg-emerald-800 px-4 py-2 md:hidden font-bold text-lg">
+      <a href="#about-us" class="text-yellow-300 py-2 border-b border-emerald-500 hover:bg-emerald-700">எங்களைப் பற்றி</a>
+      <a href="#products" class="text-yellow-100 py-2 border-b border-emerald-500 hover:bg-emerald-700">தயாரிப்புகள்</a>
+      <a href="#gallery" class="text-yellow-300 py-2 border-b border-emerald-500 hover:bg-emerald-700">புகைப்படங்கள்</a>
+      <a href="#feedback" class="text-yellow-100 py-2 border-b border-emerald-500 hover:bg-emerald-700">கருத்துகள்</a>
+      <a href="#contact" class="text-yellow-300 py-2 hover:bg-emerald-700">தொடர்பு</a>
+    </div>
+  </header>
+
+  <!-- Hero Banner with Improved Background Image -->
+  <section class="relative mb-16 overflow-hidden rounded-3xl shadow-2xl">
+    <img src="products/logo2.jpeg" alt="Herbal Clinic Banner"
+         class="absolute inset-0 w-full h-full object-cover"
+         style="filter: brightness(0.55) contrast(1.15) saturate(1.2);" />
+    <div class="absolute inset-0 bg-emerald-900/50"></div>
+    <div class="relative z-10 px-6 py-24 sm:py-32 text-center text-white max-w-3xl mx-auto animate-fadeInUp">
+      <img src="logo1.jpg" class="mx-auto mb-6 w-20 h-20 rounded-full border-4 border-yellow-300 shadow-lg" alt="Clinic Logo"/>
+      <h2 class="text-5xl sm:text-7xl font-extrabold mb-6 drop-shadow-2xl section-title">
+        🌿 அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை
+      </h2>
+      <p class="text-2xl sm:text-3xl mb-8 font-light drop-shadow">
+        தலைமுறைகள் பரம்பரை மருந்து! இயற்கை, நம்பிக்கை, நலம்.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="tel:+919367911097"
+           class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xl font-bold px-10 py-4 rounded-full shadow-xl transition hover:scale-105">
+          📞 அழைக்கவும்
+        </a>
+        <a href="#contact"
+           class="inline-block border-2 border-white hover:border-yellow-200 text-white text-xl font-bold px-10 py-4 rounded-full transition hover:scale-105">
+          📩 தொடர்பு
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about-us" class="bg-white p-10 md:p-14 mb-20 rounded-2xl shadow-xl animate-fadeInUp">
+    <h2 class="text-4xl font-bold text-center section-title text-emerald-700 mb-10">எங்களைப் பற்றி</h2>
+    <p class="text-gray-800 text-xl font-medium leading-relaxed text-center mb-8">
+      🌿 <strong>அருளகம் சித்த & ஆயுர்வேத வைத்திய சாலை</strong> – இயற்கை நலவாழ்க்கைக்கான உங்கள் நம்பிக்கையுள்ள துணை.
+    </p>
+    <ul class="list-none mt-4 space-y-5 text-gray-700 text-lg max-w-3xl mx-auto">
+      <li class="flex items-center gap-3"><span class="text-emerald-600 text-3xl">✔️</span> மூட்டு, வலி மற்றும் நரம்பியல் பிரச்சினைகள்</li>
+      <li class="flex items-center gap-3"><span class="text-emerald-600 text-3xl">✔️</span> மூலிகை சார்ந்த சிகிச்சைகள் – ஆஸ்துமா, சளி, இருமல் மற்றும் நுரையீரல்</li>
+      <li class="flex items-center gap-3"><span class="text-emerald-600 text-3xl">✔️</span> நீண்டகால நோய்கள் – சர்க்கரை, இரத்த அழுத்தம், மாதவிடாய் கோளாற்றுகள்</li>
+      <li class="flex items-center gap-3"><span class="text-emerald-600 text-3xl">✔️</span> மன அழுத்தம், தூக்கமின்மை – இயற்கை ஓய்வு சிகிச்சைகள்</li>
+      <li class="flex items-center gap-3"><span class="text-emerald-600 text-3xl">✔️</span> சிறுநீரகம் மற்றும் கல்லீரல் நோய்கள் பாரம்பரிய சித்த முறையில்</li>
+    </ul>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="mb-20">
+    <h2 class="text-4xl font-bold text-center text-emerald-700 section-title mb-10">எங்கள் தயாரிப்புகள்</h2>
+    <div id="product-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+  </section>
 
   <!-- Gallery -->
   <section id="gallery" class="mb-20">
@@ -6,7 +112,85 @@
     <div id="gallery-list" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8"></div>
   </section>
 
-  <!-- ...other sections... -->
+  <!-- Feedback/Testimonials -->
+  <section id="feedback" class="text-center my-16 px-4">
+    <h2 class="text-4xl font-bold text-emerald-700 mb-8 section-title">🗣️ வாடிக்கையாளர் கருத்துகள்</h2>
+    <p class="text-gray-600 mb-10 text-lg">எங்கள் சிகிச்சையைப் பெற்ற வாடிக்கையாளர்களின் உண்மையான கருத்துகள்:</p>
+    <div class="grid gap-8 max-w-3xl mx-auto">
+      <!-- Feedback 1 -->
+      <div class="flex items-start gap-4 bg-gradient-to-br from-yellow-50 to-emerald-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Customer 1"
+             class="w-14 h-14 rounded-full border border-emerald-300 shadow-sm" />
+        <div class="text-left flex-1">
+          <p class="text-emerald-700 font-bold mb-1">வாடிக்கையாளர் 1</p>
+          <p class="text-sm text-gray-500 mb-2">📅 June 25, 2025</p>
+          <audio controls class="w-full">
+            <source src="audio/test1.ogg" type="audio/ogg" />
+            உங்கள் உலாவியில் இந்த ஆடியோ இயங்கவில்லை.
+          </audio>
+        </div>
+      </div>
+      <!-- Feedback 2 -->
+      <div class="flex items-start gap-4 bg-gradient-to-br from-yellow-50 to-emerald-100 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135768.png" alt="Customer 2"
+             class="w-14 h-14 rounded-full border border-emerald-300 shadow-sm" />
+        <div class="text-left flex-1">
+          <p class="text-emerald-700 font-bold mb-1">வாடிக்கையாளர் 2</p>
+          <p class="text-sm text-gray-500 mb-2">📅 June 26, 2025</p>
+          <audio controls class="w-full">
+            <source src="audio/feedback2.ogg" type="audio/ogg" />
+            உங்கள் உலாவியில் இந்த ஆடியோ இயங்கவில்லை.
+          </audio>
+        </div>
+      </div>
+      <!-- Add more blocks as needed -->
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="bg-white rounded-2xl shadow-xl p-10 text-center text-gray-800 mb-16">
+    <h2 class="text-4xl font-bold text-emerald-700 section-title mb-8">தொடர்பு</h2>
+    <div class="mb-6">
+      <p class="text-xl mb-2"><strong>இடம்:</strong> அருளகம் சித்த வைத்திய சாலை</p>
+      <p>திருவிகா நகர், சின்னாளபட்டி,<br /> திண்டுக்கல் மாவட்டம், தமிழ்நாடு</p>
+      <p class="mt-4 text-lg">
+        <strong>தொலைபேசி:</strong> <a href="tel:+919367911097" class="text-emerald-600 font-bold">+91 9367911097</a><br />
+        <strong>மின்னஞ்சல்:</strong>
+        <a href="mailto:sivamurugesanarulagam@gmail.com" class="text-emerald-700 underline">sivamurugesanarulagam@gmail.com</a>
+      </p>
+    </div>
+    <!-- Simple Contact Form -->
+    <form class="max-w-xl mx-auto grid gap-4">
+      <input type="text" name="name" placeholder="பெயர்" required class="border rounded-full px-5 py-3 focus:outline-emerald-600" />
+      <input type="tel" name="phone" placeholder="தொலைபேசி" required class="border rounded-full px-5 py-3 focus:outline-emerald-600" />
+      <textarea name="message" placeholder="உங்கள் தகவல்" required class="border rounded-2xl px-5 py-3 focus:outline-emerald-600"></textarea>
+      <button type="submit" class="bg-emerald-600 text-white rounded-full px-10 py-3 font-bold hover:bg-emerald-700 transition">அனுப்பு</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-yellow-400 text-white py-8 mt-16">
+    <div class="max-w-4xl mx-auto text-center space-y-4">
+      <p>© 2025 அருளகம் சித்த வைத்திய சாலை</p>
+      <p>பாரம்பரிய சித்த மருத்துவத்தில் நம்பிக்கையின் அடையாளம்</p>
+      <div class="flex justify-center gap-4 mt-4">
+        <a href="https://wa.me/919367911097" target="_blank" title="WhatsApp" class="text-yellow-200 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <a href="mailto:sivamurugesanarulagam@gmail.com" title="Email" class="text-yellow-200 hover:text-white text-2xl"><i class="fas fa-envelope"></i> Email</a>
+        <!-- Add more social icons as needed -->
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Modal -->
+  <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 max-w-2xl w-full shadow-2xl relative">
+      <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
+      <img id="modal-image" src="" alt="" class="w-full h-64 object-contain rounded-lg mb-4" />
+      <h3 id="modal-name" class="text-2xl font-bold text-emerald-700 mb-2"></h3>
+      <p id="modal-price" class="text-xl text-emerald-600 font-semibold mb-4"></p>
+      <p id="modal-description" class="text-gray-700 text-lg leading-relaxed"></p>
+    </div>
+  </div>
 
   <!-- Gallery Lightbox Modal -->
   <div id="gallery-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden">
@@ -16,9 +200,49 @@
     </div>
   </div>
 
+  <!-- Font Awesome for icons (optional CDN) -->
+  <script src="https://kit.fontawesome.com/8e6e7f1d3e.js" crossorigin="anonymous"></script>
   <!-- Scripts -->
   <script>
-    // ...your other scripts...
+    document.getElementById("mobile-menu-toggle").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    async function fetchProducts() {
+      try {
+        const res = await fetch("products/products.txt");
+        if (!res.ok) throw new Error("products.txt not found");
+        const txt = await res.text();
+        const entries = txt.split("---").map(x => x.trim()).filter(x => x);
+        const container = document.getElementById("product-list");
+        container.innerHTML = "";
+        entries.forEach(data => {
+          const lines = data.split("\n").map(l => l.trim()).filter(Boolean);
+          if (lines.length < 4) return;
+          const [name, imgFile, priceLine, ...desc] = lines;
+          const card = document.createElement("div");
+          card.className = "bg-gradient-to-br from-white to-yellow-50 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center text-center";
+          card.innerHTML = `
+            <img src="products/${imgFile}" alt="${name}" class="w-44 h-44 object-contain mb-4 rounded-lg shadow-md border-2 border-emerald-300" />
+            <h3 class="text-2xl font-bold text-emerald-800 mb-1">${name}</h3>
+            <p class="text-emerald-700 text-lg font-semibold mb-2">${priceLine}</p>
+            <p class="text-gray-600 text-base mb-4">${desc.join(" ")}</p>
+            <button class="bg-emerald-600 text-white px-6 py-2 rounded-full font-semibold shadow hover:bg-emerald-700 transition">வாங்க / Enquire</button>
+          `;
+          card.addEventListener("click", () => {
+            document.getElementById("modal-image").src = `products/${imgFile}`;
+            document.getElementById("modal-name").textContent = name;
+            document.getElementById("modal-price").textContent = priceLine;
+            document.getElementById("modal-description").textContent = desc.join(" ");
+            document.getElementById("product-modal").classList.remove("hidden");
+          });
+          container.appendChild(card);
+        });
+      } catch (e) {
+        console.error(e);
+        document.getElementById("product-list").innerHTML = `<p class="text-center text-red-600">தயாரிப்புகளைப் பெற முடியவில்லை.</p>`;
+      }
+    }
 
     async function loadGalleryImages() {
       const container = document.getElementById("gallery-list");
@@ -33,6 +257,20 @@
       }
     }
 
+    // Sticky header shadow
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      header.classList.toggle('shadow-2xl', window.scrollY > 10);
+    });
+
+    fetchProducts();
+    loadGalleryImages();
+
+    // Modal for Product
+    document.getElementById("close-modal").addEventListener("click", () => {
+      document.getElementById("product-modal").classList.add("hidden");
+    });
+
     // Improved lightbox modal handling
     function showLightbox(src, alt) {
       document.getElementById('gallery-modal-img').src = src;
@@ -45,9 +283,6 @@
     document.getElementById('gallery-modal').onclick = function(e) {
       if (e.target === this) this.classList.add('hidden');
     };
-
-    // ...rest of your scripts...
-    loadGalleryImages();
   </script>
 </body>
 </html>
