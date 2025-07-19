@@ -204,9 +204,15 @@
   <script src="https://kit.fontawesome.com/8e6e7f1d3e.js" crossorigin="anonymous"></script>
   <!-- Scripts -->
   <script>
-    document.getElementById("mobile-menu-toggle").addEventListener("click", () => {
-      document.getElementById("mobile-menu").classList.toggle("hidden");
-    });
+    document.getElementById("close-modal").addEventListener("click", () => {
+  document.getElementById("product-modal").classList.add("hidden");
+});
+
+document.getElementById("product-modal").addEventListener("click", function(e) {
+  if (e.target === this) {
+    this.classList.add("hidden");
+  }
+});
 
     async function fetchProducts() {
       try {
