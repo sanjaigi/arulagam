@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ta">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>அருளகம் சித்த வைத்திய சாலை</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Catamaran:wght@700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -25,7 +25,7 @@
 </head>
 <body class="text-gray-900 bg-[#f7fafc]">
 
-  <!-- Header -->
+  <!-- Header/Navbar -->
   <header class="bg-gradient-to-r from-emerald-700 via-emerald-600 to-yellow-400 text-white py-4 sticky top-0 z-50 shadow-md">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
       <div class="flex items-center space-x-4">
@@ -58,7 +58,7 @@
     </div>
   </header>
 
-  <!-- Hero Banner with Improved Background Image -->
+  <!-- Hero Banner -->
   <section class="relative mb-16 overflow-hidden rounded-3xl shadow-2xl">
     <img src="products/logo2.jpeg" alt="Herbal Clinic Banner"
          class="absolute inset-0 w-full h-full object-cover"
@@ -185,7 +185,7 @@
   <div id="product-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
     <div class="bg-white rounded-xl p-8 max-w-2xl w-full shadow-2xl relative">
       <button id="close-modal" class="absolute top-4 right-4 text-gray-500 hover:text-red-500 text-2xl">&times;</button>
-      <img id="modal-image" src="" alt="" class="w-full h-64 object-contain rounded-lg mb-4" />
+      <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-lg mb-4" />
       <h3 id="modal-name" class="text-2xl font-bold text-emerald-700 mb-2"></h3>
       <p id="modal-price" class="text-xl text-emerald-600 font-semibold mb-4"></p>
       <p id="modal-description" class="text-gray-700 text-lg leading-relaxed"></p>
@@ -204,15 +204,18 @@
   <script src="https://kit.fontawesome.com/8e6e7f1d3e.js" crossorigin="anonymous"></script>
   <!-- Scripts -->
   <script>
-    document.getElementById("close-modal").addEventListener("click", () => {
-  document.getElementById("product-modal").classList.add("hidden");
-});
+    document.getElementById("mobile-menu-toggle").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
 
-document.getElementById("product-modal").addEventListener("click", function(e) {
-  if (e.target === this) {
-    this.classList.add("hidden");
-  }
-});
+    document.getElementById("close-modal").addEventListener("click", () => {
+      document.getElementById("product-modal").classList.add("hidden");
+    });
+    document.getElementById("product-modal").addEventListener("click", function(e) {
+      if (e.target === this) {
+        this.classList.add("hidden");
+      }
+    });
 
     async function fetchProducts() {
       try {
@@ -229,7 +232,7 @@ document.getElementById("product-modal").addEventListener("click", function(e) {
           const card = document.createElement("div");
           card.className = "bg-gradient-to-br from-white to-yellow-50 p-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 flex flex-col items-center text-center";
           card.innerHTML = `
-            <img src="products/${imgFile}" alt="${name}" class="w-80 h-80 object-contain rounded-xl shadow-lg border-2 border-emerald-200 bg-white mb-4" 
+            <img src="products/${imgFile}" alt="${name}" class="w-80 h-80 object-cover rounded-xl shadow-lg border-2 border-emerald-200 bg-white mb-4"
               onerror="this.onerror=null;this.src='products/default-product.jpeg';" />
             <h3 class="text-2xl font-bold text-emerald-800 mb-1">${name}</h3>
             <p class="text-emerald-700 text-lg font-semibold mb-2">${priceLine}</p>
@@ -238,6 +241,7 @@ document.getElementById("product-modal").addEventListener("click", function(e) {
           `;
           card.addEventListener("click", () => {
             document.getElementById("modal-image").src = `products/${imgFile}`;
+            document.getElementById("modal-image").alt = name;
             document.getElementById("modal-name").textContent = name;
             document.getElementById("modal-price").textContent = priceLine;
             document.getElementById("modal-description").textContent = desc.join(" ");
@@ -264,7 +268,6 @@ document.getElementById("product-modal").addEventListener("click", function(e) {
       }
     }
 
-    // Sticky header shadow
     window.addEventListener('scroll', () => {
       const header = document.querySelector('header');
       header.classList.toggle('shadow-2xl', window.scrollY > 10);
@@ -273,12 +276,6 @@ document.getElementById("product-modal").addEventListener("click", function(e) {
     fetchProducts();
     loadGalleryImages();
 
-    // Modal for Product
-    document.getElementById("close-modal").addEventListener("click", () => {
-      document.getElementById("product-modal").classList.add("hidden");
-    });
-
-    // Improved lightbox modal handling
     function showLightbox(src, alt) {
       document.getElementById('gallery-modal-img').src = src;
       document.getElementById('gallery-modal-img').alt = alt;
